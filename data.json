@@ -1,0 +1,82 @@
+{
+  "alarms": [
+    {
+      "time": "2025-11-26T18:00:00+00:00",
+      "voice_file_path": "Serious.m4a",
+      "repeat": "none",
+      "label": "Gym",
+      "active": true
+    },
+    {
+      "time": "2025-11-24T18:00:52.454000+00:00",
+      "voice_file_path": "wake_up.m4a",
+      "repeat": "daily",
+      "label": "Test Alarm",
+      "active": true
+    },
+    {
+      "time": "2025-11-26T22:00:00+00:00",
+      "voice_file_path": "Motivational.m4a",
+      "repeat": "none",
+      "label": "Joke night",
+      "active": true
+    },
+    {
+      "time": "2025-11-24T18:00:59.612000+00:00",
+      "voice_file_path": "wake_up.m4a",
+      "repeat": "daily",
+      "label": "Test Alarm",
+      "active": true
+    },
+    {
+      "time": "2025-11-27T22:00:00+00:00",
+      "voice_file_path": "Motivational.m4a",
+      "repeat": "none",
+      "label": "Joke night",
+      "active": true
+    },
+    {
+      "time": "2025-11-24T18:01:07.223000+00:00",
+      "voice_file_path": "wake_up.m4a",
+      "repeat": "daily",
+      "label": "Test Alarm",
+      "active": true
+    },
+    {
+      "time": "2025-11-27T22:00:00+00:00",
+      "voice_file_path": "Serious.m4a",
+      "repeat": "none",
+      "label": "Joke night",
+      "active": true
+    },
+    {
+      "time": "2025-11-27T22:00:00+00:00",
+      "voice_file_path": "Serious.m4a",
+      "repeat": "none",
+      "label": "Joke night",
+      "active": true
+    },
+    {
+      "time": "2025-11-27T22:00:00+00:00",
+      "voice_file_path": "Serious.m4a",
+      "repeat": "none",
+      "label": "Joke night",
+      "active": true
+    },
+    {
+      "time": "2025-11-25T15:00:00+00:00",
+      "voice_file_path": "Serious.m4a",
+      "repeat": "none",
+      "label": "Chill",
+      "active": true
+    },
+    {
+      "time": "2025-11-25T15:00:00+00:00",
+      "voice_file_path": "Serious.m4a",
+      "repeat": "none",
+      "label": "Chill",
+      "active": true
+    }
+  ],
+  "reminders": []
+}
