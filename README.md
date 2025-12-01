@@ -1,4 +1,4 @@
-# WEthan Alarm and Reminder Backend (Python)
+w# WEthan Alarm and Reminder Backend (Python)
 This folder contains the **Python backend** for our Alarm & Reminder MVP project, developed for the **Algorithms & Data Structures** course.
 
 The backend provides:
@@ -14,9 +14,9 @@ The mobile app found in `../expoApp/` is **optional** and not required for gradi
 
 ---
 
-# ✨ Features
+#  Features
 
-## 🔔 Alarms
+##  Alarms
 - Create alarms with:
   - Time (ISO format)
   - Label
@@ -25,7 +25,7 @@ The mobile app found in `../expoApp/` is **optional** and not required for gradi
   - Activation flag
 - View all alarms in JSON format.
 
-## 📝 Reminders
+##  Reminders
 - Create reminders with:
   - Title  
   - Description  
@@ -34,7 +34,7 @@ The mobile app found in `../expoApp/` is **optional** and not required for gradi
 - View all reminders
 - View reminders **sorted by urgency** using our custom **Quicksort algorithm**.
 
-## 💾 Data Storage
+##  Data Storage
 All reminders and alarms are saved in data.json.
 This file is automatically loaded at startup and updated after every change.
 
