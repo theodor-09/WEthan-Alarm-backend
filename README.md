@@ -1,4 +1,4 @@
-w# WEthan Alarm and Reminder Backend (Python)
+# WEthan Alarm and Reminder Backend (Python)
 This folder contains the **Python backend** for our Alarm & Reminder MVP project, developed for the **Algorithms & Data Structures** course.
 
 The backend provides:
