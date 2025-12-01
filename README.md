@@ -68,11 +68,18 @@ u_cache = {id(t): urgency(t) for t in tasks}
      - Open the Expoapp_Python folder
      - Install dependencies (first time only)
          - Open a terminal inside this folder and run: pip install -r requirements.txt
+           -![install req](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-12-01%20151707.png)
+           -It should look like this:
+           -![install_out](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-12-01%20151731.png)
      - Start the backend
         - run_backend.py by double click
+           -It should look like this:
+           -![running](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-12-01%20151707.png)
         - you should see Uvicorn running on http://127.0.0.1:8000
            - open the aplication on http://127.0.0.1:8000/
+             -![opened](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-11-30%20205300.png)
            - press Interactive API Interface (front-end)
+             -![API](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-11-30%20203240.png)
   ## How to use the API
   - Check backend status: GET /status, Try it out, Execute
       - expected response body : {"status": "Wethan backend running!"}
