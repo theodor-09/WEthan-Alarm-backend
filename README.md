@@ -74,7 +74,7 @@ u_cache = {id(t): urgency(t) for t in tasks}
      - Start the backend
         - run_backend.py by double click
            -It should look like this:
-           -![running](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-12-01%20151707.png)
+           -![running](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-12-01%20152914.png)
         - you should see Uvicorn running on http://127.0.0.1:8000
            - open the aplication on http://127.0.0.1:8000/
              -![opened](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-11-30%20205300.png)
