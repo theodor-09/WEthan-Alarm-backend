@@ -91,16 +91,16 @@ u_cache = {id(t): urgency(t) for t in tasks}
    - Create an Alarm
        - open: POST /createAlarm
        - Example input: {"time": "2025-12-01T07:30:00","voice_file_path": "none","repeat": "none","label": "Morning alarm"}
-    - View all alarms
+       - View all alarms
        - open: GET /allAlarms
        - This lists all stored alarms.
 ## Further Improvements
- -Implement snooze and skip states for alarms
- -Add audio playback capabilities
- -Import class schedules (ICS)
- -Upgrade JSON storage to SQLite
- -Authentication system
- -More advanced front-end
+  - Implement snooze and skip states for alarms
+  - Add audio playback capabilities
+  - Import class schedules (ICS)
+  - Upgrade JSON storage to SQLite
+  - Authentication system
+  - More advanced front-end
 
 ## Credits
  - Team Members: MÁTÉ ANTAL, THEODOR-GABRIEL DAVID,ETHAN BENJAMIN ARTHUR JESSUP, BARTOLOMÉ MARÍA URDA, DAVID HYEON PARRAGA
