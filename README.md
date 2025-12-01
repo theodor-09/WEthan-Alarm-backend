@@ -67,7 +67,7 @@ u_cache = {id(t): urgency(t) for t in tasks}
  - Extract the ZIP folder
      - Open the Expoapp_Python folder
      - Install dependencies (first time only)
-         - Open a terminal inside this folder and run: pip install -r requirements.txt
+         - Open a terminal inside this folder(right click inside folder) and run: pip install -r requirements.txt
            -![install req](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-12-01%20151707.png)
            -It should look like this:
            -![install_out](https://github.com/theodor-09/WEthan-Alarm-backend/blob/main/Screenshot%202025-12-01%20151731.png)
