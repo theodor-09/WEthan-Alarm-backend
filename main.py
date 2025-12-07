@@ -91,23 +91,26 @@ class AlarmRequest(BaseModel):
 
 @app.post("/createAlarm")
 def create_alarm(data: AlarmRequest):
-   alarm = Alarm(
-    time=datetime.fromisoformat(data.time),
-    voice_level=data.voice_level,
-    repeat=data.repeat,
-    label=data.label
-)
-
+    alarm = Alarm(
+        time=datetime.fromisoformat(data.time),
+        voice_level=data.voice_level,
+        repeat=data.repeat,
+        label=data.label
+    )
 
     alarms.append(alarm)
-    repo.save(alarms, reminders)  
-    return {"status": "success", "alarm": {
-    "label": alarm.label,
-    "time": alarm.time.isoformat(),
-    "voice_level": alarm.voice_level,
-    "repeat": alarm.repeat,
-    "active": alarm.active
-}}
+    repo.save(alarms, reminders)
+    return {
+        "status": "success",
+        "alarm": {
+            "label": alarm.label,
+            "time": alarm.time.isoformat(),
+            "voice_level": alarm.voice_level,
+            "repeat": alarm.repeat,
+            "active": alarm.active
+        }
+    }
+
 
 @app.get("/playAlarm/{alarm_id}")
 def play_alarm(alarm_id: int):
