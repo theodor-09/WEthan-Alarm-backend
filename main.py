@@ -6,8 +6,16 @@ from alarm_model import Alarm
 from sorting import quicksort
 from storage import Repository  
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
+from fastapi import HTTPException
+from fastapi.responses import FileResponse
 
 app = FastAPI()
+# Mount static audio folder
+BASE_DIR = Path(__file__).parent
+audio_path = BASE_DIR / "audio"
+app.mount("/audio", StaticFiles(directory=audio_path), name="audio")
 @app.get("/", response_class=HTMLResponse)
 def read_root():
     return """
@@ -75,32 +83,41 @@ VOICE_FILES = {
     3: "Motivational 2.m4a"   
 }
 
-
 class AlarmRequest(BaseModel):
     time: str               # ISO string
-    voice_file_path: str
+    voice_level: int
     repeat: str
     label: str
 
 @app.post("/createAlarm")
 def create_alarm(data: AlarmRequest):
-    alarm = Alarm(
-        time=datetime.fromisoformat(data.time),
-        voice_file_path=data.voice_file_path,
-        repeat=data.repeat,
-        label=data.label
-    )
+   alarm = Alarm(
+    time=datetime.fromisoformat(data.time),
+    voice_level=data.voice_level,
+    repeat=data.repeat,
+    label=data.label
+)
+
 
     alarms.append(alarm)
     repo.save(alarms, reminders)  
     return {"status": "success", "alarm": {
     "label": alarm.label,
     "time": alarm.time.isoformat(),
-    "voice_file": alarm.voice_file_path,
+    "voice_level": alarm.voice_level,
     "repeat": alarm.repeat,
     "active": alarm.active
 }}
 
+@app.get("/playAlarm/{alarm_id}")
+def play_alarm(alarm_id: int):
+    for alarm in alarms:
+        if getattr(alarm, "id", None) == alarm_id:
+            file_name = VOICE_FILES.get(alarm.voice_level)
+            if not file_name:
+                raise HTTPException(status_code=400, detail="Invalid voice level")
+            return FileResponse(path=audio_path / file_name, media_type="audio/mp4")
+    raise HTTPException(status_code=404, detail="Alarm not found")
 
 @app.get("/allAlarms")
 def get_alarms():
