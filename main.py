@@ -101,6 +101,7 @@ def create_alarm(data: AlarmRequest):
     alarms.append(alarm)
     repo.save(alarms, reminders)
     return {
+        "id": alarm.id,
         "status": "success",
         "alarm": {
         "label": alarm.label,
