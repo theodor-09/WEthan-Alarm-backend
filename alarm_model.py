@@ -2,11 +2,13 @@ from datetime import datetime, timedelta
 import os
 from pydantic import BaseModel
 from typing import Optional
+from uuid import uuid4
 
 ALLOWED_AUDIO_EXTS = {".mp3", ".wav", ".m4a", ".aac", ".ogg"}
 
 class Alarm():
     def __init__(self, time, voice_level, repeat, label):
+        self.id = str(uuid4())
         self.time = time
         self.voice_level = voice_level
         self.repeat = repeat          # "none", "daily", "weekdays"
