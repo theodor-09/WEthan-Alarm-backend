@@ -15,7 +15,7 @@ import json, os
 def _serialize_alarm(a):
     return {
         "time": a.time.isoformat(),
-        "voice_file_path": a.voice_file_path,
+        "voice_level"=d["voice_level"],
         "repeat": a.repeat,
         "label": a.label,
         "active": a.active,
@@ -24,7 +24,7 @@ def _serialize_alarm(a):
 def _deserialize_alarm(d, AlarmClass):
     a = AlarmClass(
         time=datetime.fromisoformat(d["time"]),
-        voice_file_path=d["voice_file_path"],
+       "voice_level"=d["voice_level"],
         repeat=d["repeat"],
         label=d["label"],
     )
