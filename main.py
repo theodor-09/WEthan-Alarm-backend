@@ -69,6 +69,13 @@ def get_all():
 # ALARMS
 # --------------------------
 
+VOICE_FILES = {
+    1: "funny.mp4",          
+    2: "Serious.m4a",        
+    3: "Motivational 2.m4a"   
+}
+
+
 class AlarmRequest(BaseModel):
     time: str               # ISO string
     voice_file_path: str
