@@ -97,17 +97,17 @@ def create_alarm(data: AlarmRequest):
         repeat=data.repeat,
         label=data.label
     )
-
+    
     alarms.append(alarm)
     repo.save(alarms, reminders)
     return {
         "status": "success",
         "alarm": {
-            "label": alarm.label,
-            "time": alarm.time.isoformat(),
-            "voice_level": alarm.voice_level,
-            "repeat": alarm.repeat,
-            "active": alarm.active
+        "label": alarm.label,
+        "time": alarm.time.isoformat(),
+        "voice_level": alarm.voice_level,
+        "repeat": alarm.repeat,
+        "active": alarm.active
         }
     }
 
