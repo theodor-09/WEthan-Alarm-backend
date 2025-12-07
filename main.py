@@ -114,7 +114,7 @@ def create_alarm(data: AlarmRequest):
 
 
 @app.get("/playAlarm/{alarm_id}")
-def play_alarm(alarm_id: int):
+def play_alarm(alarm_id: str):
     for alarm in alarms:
         if getattr(alarm, "id", None) == alarm_id:
             file_name = VOICE_FILES.get(alarm.voice_level)
