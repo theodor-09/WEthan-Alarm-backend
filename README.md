@@ -8,6 +8,7 @@ The backend provides:
 - Functionality to create and store **reminders** and **alarms**
 - A **custom Quicksort algorithm** to sort reminders by urgency
 - Automatic persistence using `data.json`
+- Audio playback capabilities
 
 This backend is the **required** component for the ADS project.  
 The mobile app found in `../expoApp/` is **optional** and not required for grading.
@@ -21,9 +22,10 @@ The mobile app found in `../expoApp/` is **optional** and not required for gradi
   - Time (ISO format)
   - Label
   - Repeat mode (`none`, `daily`, `weekdays`)
-  - Voice file path placeholder
+  - Voice intensity level (1 = funny, 2 = serious, 3 = motivational)
   - Activation flag
 - View all alarms in JSON format.
+- Play a voice alarm based on its intensity level (funny, serious, motivational)
 
 ##  Reminders
 - Create reminders with:
@@ -90,13 +92,16 @@ u_cache = {id(t): urgency(t) for t in tasks}
        - open: GET /allReminders
    - Create an Alarm
        - open: POST /createAlarm
-       - Example input: {"time": "2025-12-01T07:30:00","voice_file_path": "none","repeat": "none","label": "Morning alarm"}
+       - Example input: {"time": "2025-12-08T07:00:00","voice_level": 2,"repeat": "weekdays","label": "Morning Motivation"}
+       - Play an alarm
+         - open: GET /playAlarm
+         - Copy the returned "id" value from createAlarm or allAlarms and play
        - View all alarms
-       - open: GET /allAlarms
-       - This lists all stored alarms.
+         - open: GET /allAlarms
+         - This lists all stored alarms.
+      
 ## Further Improvements
   - Implement snooze and skip states for alarms
-  - Add audio playback capabilities
   - Import class schedules (ICS)
   - Upgrade JSON storage to SQLite
   - Authentication system
