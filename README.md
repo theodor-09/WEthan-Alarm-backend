@@ -108,7 +108,7 @@ u_cache = {id(t): urgency(t) for t in tasks}
   - More advanced front-end
 
 ## Credits
- - Team Members: MÁTÉ ANTAL, THEODOR-GABRIEL DAVID,ETHAN BENJAMIN ARTHUR JESSUP, BARTOLOMÉ MARÍA URDA, DAVID HYEON PARRAGA
+ - Team Members: MÁTÉ ANTAL, THEODOR-GABRIEL DAVID,ETHAN BENJAMIN ARTHUR JESSUP, BARTOLOMÉ MARÍA URDA, DAVID HYEON PARRAGA, MAXIMILIAN BIATTURI
  - Course: Algorithms and Data Structure
  - Professor: ANTONIO LÓPEZ ROSELL
 
