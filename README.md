@@ -9,10 +9,6 @@ The backend provides:
 - A **custom Quicksort algorithm** to sort reminders by urgency
 - Automatic persistence using `data.json`
 - Audio playback capabilities
-
-This backend is the **required** component for the ADS project.  
-The mobile app found in `../expoApp/` is **optional** and not required for grading.
-
 ---
 
 #  Features
